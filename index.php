@@ -4,7 +4,6 @@
     if (isset($_REQUEST['send_data'])) {
 
         $webhook_url = $send_data['webhook'];
-        
         $data = [
             "content" => "**[ {$send_data['ticker']} ]** [{$send_data['subject']}]({$send_data['url']})",
             "username" => "stock-new-bot", // 선택사항: 웹훅에 표시될 사용자 이름
@@ -26,6 +25,7 @@
         if ($response === false) {
             return false;
         } else {
+            print_r($response)
             return true;
         }
     }
