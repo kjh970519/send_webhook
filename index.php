@@ -22,10 +22,18 @@
         $response = curl_exec($ch);
         curl_close($ch);
 
+        xmp($response);
+
         if ($response === false) {
             return false;
         } else {
             return true;
         }
+    }
+
+    function xmp($vars) {
+        echo "<xmp style='background-color: #6BB6BB'>";
+        print_r($vars);
+        echo "</xmp>";
     }
 ?>
