@@ -1,7 +1,7 @@
 <?php
-    $send_data = $_REQUEST['send_data'];
 
     if (isset($_REQUEST['send_data'])) {
+        $send_data = json_decode($_REQUEST['send_data'], true);
 
         $webhook_url = $send_data['webhook'];
         $data = [
@@ -25,7 +25,7 @@
         if ($response === false) {
             return false;
         } else {
-            print_r($response)
+            print_r($response);
             return true;
         }
     }
