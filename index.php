@@ -25,7 +25,6 @@
         if ($response === false) {
             return false;
         } else {
-            print_r($response);
             return true;
         }
     }
