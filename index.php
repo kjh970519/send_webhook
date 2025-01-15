@@ -1,5 +1,6 @@
 <?php
 
+    xmp($_REQUEST['send_data']);
     if (isset($_REQUEST['send_data'])) {
         $send_data = json_decode($_REQUEST['send_data'], true);
 
@@ -21,8 +22,6 @@
 
         $response = curl_exec($ch);
         curl_close($ch);
-
-        xmp($response);
 
         if ($response === false) {
             return false;
