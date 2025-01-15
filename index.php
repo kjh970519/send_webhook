@@ -1,6 +1,4 @@
 <?php
-
-    xmp($_REQUEST['send_data']);
     if (isset($_REQUEST['send_data'])) {
         $send_data = json_decode($_REQUEST['send_data'], true);
 
