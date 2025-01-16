@@ -4,7 +4,7 @@
 
         $webhook_url = $send_data['webhook'];
         $data = [
-            "content" => "**[ {$send_data['ticker']} ]** - {$send_data['date']} [{$send_data['subject']}]({$send_data['url']})",
+            "content" => "**[ {$send_data['ticker']} ]** [{$send_data['subject']}]({$send_data['url']})",
             "username" => "stock-new-bot", // 선택사항: 웹훅에 표시될 사용자 이름
             "avatar_url" => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6ecGI6G--McHmbv95b61RDQbL7ZggrsQ4IA&s', // 봇의 프로필 이미지 URL
         ];
